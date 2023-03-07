@@ -11,7 +11,7 @@ public class AreaGeometry {
         rectangle,
     }
 
-    public double circleArea() {
+    public static double circleArea() {
         Scanner read_radius = new Scanner(System.in);
         final double pii = 3.14;
         System.out.println("Enter the raduis of the circle");
@@ -21,9 +21,7 @@ public class AreaGeometry {
     }
 
 
-    public int squareArea() {
-
-
+    public static int squareArea() {
         Scanner read_side = new Scanner(System.in);
         System.out.println("Enter the side of the Square");
         int side = read_side.nextInt();
@@ -31,7 +29,7 @@ public class AreaGeometry {
     }
 
 
-    public int rectangleArea() {
+    public static int rectangleArea() {
         Scanner read_side = new Scanner(System.in);
         System.out.println("Enter the side1 of the rectangle ");
         int side1 = read_side.nextInt();
@@ -39,19 +37,18 @@ public class AreaGeometry {
         int side2 = read_side.nextInt();
         return side1 * side2;
 
-
     }
 
     public static void main(String[] args) {
 
-        AreaGeometry object = new AreaGeometry();
+        //iterating the values and calling the methods
         for (Shape index : Shape.values()) {
             if (index == Shape.circle) {
-                System.out.println(object.circleArea());
+                System.out.println(circleArea());
             } else if (index == Shape.Square) {
-                System.out.println(object.squareArea());
+                System.out.println(squareArea());
             } else if (index == Shape.rectangle) {
-                System.out.println(object.rectangleArea());
+                System.out.println(rectangleArea());
             }
         }
 
