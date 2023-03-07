@@ -20,7 +20,7 @@ public class CheckPrime {
         if (count > 2) {
             System.out.println("number not prime");
         } else {
-            System.out.println("numner is prime");
+            System.out.println("number is prime");
         }
 
     }
